@@ -5,15 +5,16 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">My Bank</RouterLink>
+        <RouterLink to="/payments">Payments</RouterLink>
+        <RouterLink to="/transfers">Transfers</RouterLink>
+        <RouterLink to="/messages">Messages</RouterLink>
       </nav>
+      <hr/>
     </div>
   </header>
 
@@ -30,7 +31,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
   font-weight: normal;
 }
-
+hr{
+  margin-bottom: 50px;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -80,10 +83,6 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 
   #app {
     display: grid;
@@ -92,9 +91,6 @@ nav a:first-of-type {
   }
 
   header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {
